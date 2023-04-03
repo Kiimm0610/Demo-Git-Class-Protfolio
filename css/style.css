@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    left: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Hind", sans-serif;
+    font-size: 1.6rem;
+}
+
+/* ============== HEADER ================ */
+header {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+header .logo i {
+    font-size: 4.5rem;
+    color: #35a22c;
+}
+
+header .logo span {
+    font-size: 3.2rem;
+}
+
+
+header .menu li {
+    margin: 0 1.28rem;
+}
+
+header .menu li a {
+    color: #fff !important;
+    transition: all 0.5s;
+}
+
+header .menu li.active a {
+    color: #35a22c !important;
+}
+
+header .menu li.active a::after {
+    width: 100%;
+}
+
+header .menu li a::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+
+header .menu li a:hover::after,
+header .menu li:hover a {
+    color: #35a22c !important;
+    width: 100%;
+}
+/* ============== CAROUSEL ================ */
+.carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(40%) brightness(100%);
+}
+
+.carousel-item:first-child {
+    background-image: url(../image/mountains-1.jpg);
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(../image/finland.jpg);
+}
+
+.carousel-item:last-child {
+    background-image: url(../image/mountains.jpg);
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption-thumb {
+    width: 140px;
+    margin: 0 auto;
+}
+
+.carousel-caption-thumb img {
+    border-radius: 50%;
+}
+
+.carousel-caption h3 {
+    font-size: 5.6rem;
+    line-height: 65px;
+}
+
+.carousel-indicators li {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+/* ============== PROJECT ================ */
+#project .title {
+    max-width: 750px;
+}
+
+#project .title h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+#project .title p {
+    line-height: 24px;
+}
+
+.project__content .card {
+    border-radius: 20px;
+    box-shadow: 0 0 0.64rem rgba(0, 0, 0, 0.13);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.project__content .card .card-body {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 0 0 20px 20px;
+    transition: all 0.5s;
+}
+
+.project__content .card:hover .card-body {
+    border-color: #35a22c;
+    border-top-color: transparent;
+}
+
+.project__content .card-title {
+    font-size: 1.6rem;
+}
+
+.project__content .nav-pills .nav-link {
+    margin: 0 5px;
+    min-width: 110px;
+    text-align: center;
+    color: #1a1d2d;
+    border: 1px solid #1a1d2d;
+    border-radius: 5px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #35a22c;
+    border-color: #35a22c;
+}
+/* ============== SERVICE ================ */
+.service {
+    position: relative;
+    background-image: url(../image/3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: grayscale(70%) brightness(100%); */
+}
+
+.service__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;width: 100%;
+    background-color: #0000009a;
+}
+
+.service .title {
+    position: relative;
+}
+
+
+
+.service__content .card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    transition: all 0.5s;
+}
+
+@media only screen and (max-width:768px) {
+    .service__content .card {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (min-width:576px) {
+    .service__content .card {
+        margin: 10px 0;
+    }
+}
+
+.service__content .card:hover {
+    border-color: #fff;
+    background-color: #000;
+}
+
+.service__content .card i {
+    font-size: 4.8rem;
+    color: #35a22c;
+}
+
+.service__content .card-title {
+    padding-top: 25px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.service__content .card-text {
+    padding-top: 15px;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
